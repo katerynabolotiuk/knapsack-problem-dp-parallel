@@ -13,7 +13,7 @@ public class SequentialDPBenchmark {
             for (int w : capacities) {
                 KnapsackProblem problem = Utils.generateRandomProblem(n, 100, 100, w);
 
-                    long avgTimeMs = benchmark(() -> SequentialDPAlgorithm.solve(problem), warmupRuns, measurementRuns);
+                long avgTimeMs = benchmark(() -> SequentialDPAlgorithm.solve(problem), warmupRuns, measurementRuns);
 
                 System.out.printf("N = %-6d | W = %-6d | avg. time = %5d ms%n", n, w, avgTimeMs);
 
